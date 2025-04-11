@@ -34,10 +34,10 @@ persistent actor DailyPlanner {
 
   public type AddNoteResult = Result.Result<Text, Text>;
 
-  // HashMap to store the data for each day.
+  // HashMap to store the data for each day..
   var dayData = HashMap.new<Text, DayData>();
 
-  // Query function to get data for a specific date.
+  // Query function to get data for a specific date..
   // Returns null if the date does not contain any data.
   public query func getDayData(date : Text) : async ?DayData {
     HashMap.get(dayData, thash, date);
